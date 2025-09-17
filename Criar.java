@@ -5,13 +5,15 @@ public class Criar {
     int vida;
     int ataque;
     int defesa;
+    int agilidade;
 
     // Construtor
-    public Criar(String nome, int vida, int ataque, int defesa) {
+    public Criar(String nome, int vida, int ataque, int defesa, int agilidade) {
         this.nome = nome;
         this.vida = vida;
         this.ataque = ataque;
         this.defesa = defesa;
+        this.defesa = agilidade;
     }
 
     // Mostrar o status
@@ -30,17 +32,17 @@ public class Criar {
 
         switch (escolha) {
             case "guerreiro":
-                heroi = new Criar("Guerreiro", 80, 20, 4);
+                heroi = new Criar("Guerreiro", 80, 20, 10,2);
                 break;
             case "elfo":
-                heroi = new Criar("Elfo", 55, 17, 15);
+                heroi = new Criar("Elfo", 55, 17, 15, 10);
                 break;
             case "ladrao":
-                heroi = new Criar("Ladrao", 75, 10, 9);
+                heroi = new Criar("Ladrao", 75, 10, 9,30);
                 break;
             default:
                 System.out.println("CLASSE INVALIDA! VOCE SERA UM BASTARDO");
-                heroi = new Criar("Bastardo", 30, 5, 2);
+                heroi = new Criar("Bastardo", 30, 5, 2, 4);
                 break;
         }
 
