@@ -13,12 +13,12 @@ public class Criar {
         this.vida = vida;
         this.ataque = ataque;
         this.defesa = defesa;
-        this.defesa = agilidade;
+        this.agilidade = agilidade;
     }
 
     // Mostrar o status
     public void mostrarStatus() {
-        System.out.println(nome + " | Vida: " + vida + " | Ataque: " + ataque + " | Defesa: " + defesa);
+        System.out.println(nome + " | Vida: " + vida + " | Ataque: " + ataque + " | Defesa: " + defesa +"| Agilidade:" + agilidade);
     }
 
     public static void main(String[] args) {
