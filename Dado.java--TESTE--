@@ -7,7 +7,6 @@ public class Dado {
         Random gerador = new Random();
 
         // Gera um número aleatório entre 0 (inclusive) e o lado max. do dado (exclusive)
-        // ou seja, de 0 a 5.
         int numeroAleatorio = gerador.nextInt(lado);
 
         // Para obter o intervalo de 1 a lado max. do dado, somamos 1 ao resultado.
