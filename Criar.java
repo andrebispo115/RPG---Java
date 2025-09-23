@@ -3,22 +3,22 @@ import java.util.Scanner;
 public class Criar {
     String nome; 
     int vida;
-    int ataque;
+    int forca;
     int defesa;
     int agilidade;
 
     // Construtor
-    public Criar(String nome, int vida, int ataque, int defesa, int agilidade) {
+    public Criar(String nome, int vida, int forca, int defesa, int agilidade) {
         this.nome = nome;
         this.vida = vida;
-        this.ataque = ataque;
+        this.ataque = forca;
         this.defesa = defesa;
         this.agilidade = agilidade;
     }
 
     // Mostrar o status
     public void mostrarStatus() {
-        System.out.println(nome + " | Vida: " + vida + " | Ataque: " + ataque + " | Defesa: " + defesa +"| Agilidade:" + agilidade);
+        System.out.println(nome + " | Vida: " + vida + " | Forca: " + forca + " | Defesa: " + defesa +"| Agilidade:" + agilidade);
     }
 
     public static void main(String[] args) {
