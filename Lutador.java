@@ -1,14 +1,14 @@
 public class Lutador {
     private String nome;
     private int vida;
-    private int ataque;
+    private int forca;
     private int defesa;
     private int agilidade;
 
-    public Lutador(String nome, int vida, int ataque, int defesa ,int agilidade) {
+    public Lutador(String nome, int vida, int forca, int defesa ,int agilidade) {
         this.nome = nome;
         this.vida = vida;
-        this.ataque = ataque;
+        this.forca = forca;
         this.defesa = defesa;
         this.agilidade = agilidade;
     }
@@ -29,12 +29,12 @@ public class Lutador {
         this.vida = vida ;
     }
     
-    public int getataque(){
-        return this.ataque;
+    public int getforca(){
+        return this.forca;
     }
     
-    public void setataque(int ataque){
-        this.ataque = ataque ;
+    public void setforca(int forca){
+        this.forca = forca ;
     }
     
     public int getdefesa(){
