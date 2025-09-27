@@ -3,60 +3,55 @@ public class Inimigo {
     private String nome;
     private int vida;
     private int forca;
+    private int defesa;
     private int agilidade;
 
-    public Heroi(String nome, int vida, int forca,  int agilidade) {
+    public Heroi(String nome, int vida, int forca, int defesa, int agilidade) {
         this.nome = nome;
         this.pv = vida;
         this.forca = forca;
+        this.defesa = defesa;
         this.agilidade = agilidade;
     }
 
-    public String getNome() {
+    public String getnome() {
         return nome;
     }
 
-    public int getPv() {
-        return pv;
+    public int getvida() {
+        return vida;
     }
 
-    public int getForca() {
+    public int getforca() {
         return forca;
     }
 
-    public int getConstituicao() {
+    public int getdefesa() {
         return constituicao;
     }
 
-    public int getAgilidade() {
+    public int getagilidade() {
         return agilidade;
     }
 
-    public int getDestreza() {
-        return destreza;
-    }
-
-    public void setNome(String nome) {
+    public void setnome(String nome) {
         this.nome = nome;
     }
     
-    public void setPv(int pv) {
-        this.pv = pv;
+    public void setvida(int vida) {
+        this.vida = vida;
     }
     
-    public void setForca(int forca) {
+    public void setforca(int forca) {
         this.forca = forca;
     }
     
-    public void setConstituicao(int constituicao) {
-        this.constituicao = constituicao;
+    public void setCdefesa(int defesa) {
+        this.defesao = defesa;
     }
     
-    public void setAgilidade(int agilidade) {
+    public void setagilidade(int agilidade) {
         this.agilidade = agilidade;
     }
     
-    public void setDestreza(int destreza) {
-        this.destreza = destreza;
-    }
 }
