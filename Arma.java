@@ -16,17 +16,15 @@ public class Arma extends Dado {
         return this.dano;
     }
 
-
-    // O método recebe a força e a destreza do herói como parâmetros.
-    public void calcularDano(double forcaHeroi, double destrezaHeroi) {
+    public void calcularDano(d) {
         if (this.categoria.equals("Pesada")) {
             int resultadoDado = rolarDado(12);
-            this.dano = (forcaHeroi * 1.5) + this.constanteDeDano + resultadoDado;
+            this.dano = (this.forca * 1.5) + this.constanteDeDano + resultadoDado;
         } else { // Categoria "Leve"
             int resultadoD6_1 = rolarDado(6);
             int resultadoD6_2 = rolarDado(6);
             int resultadoD4 = rolarDado(4);
-            this.dano = resultadoD6_1 + resultadoD6_2 + resultadoD4 + destrezaHeroi + this.constanteDeDano;
+            this.dano = resultadoD6_1 + resultadoD6_2 + resultadoD4 + this.destreza + this.constanteDeDano;
         }
     }
 }
