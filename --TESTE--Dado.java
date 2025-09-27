@@ -14,3 +14,4 @@ public class Dado {
 
         System.out.println("D" + lado": " + resultado);
     }
+}    
