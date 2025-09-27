@@ -4,16 +4,12 @@ public class Inimigo {
     private int vida;
     private int forca;
     private int agilidade;
-    private int constituicao;
-    private int destreza;
 
-    public Heroi(String nome, int pv, int forca, int constituicao, int agilidade, int destreza) {
+    public Heroi(String nome, int vida, int forca,  int agilidade) {
         this.nome = nome;
-        this.pv = pv;
+        this.pv = vida;
         this.forca = forca;
-        this.constituicao = constituicao;
         this.agilidade = agilidade;
-        this.destreza = destreza;
     }
 
     public String getNome() {
