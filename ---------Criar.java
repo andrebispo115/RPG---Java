@@ -4,14 +4,18 @@ public class Criar {
     int ataque;
     int defesa;
     int agilidade;
+    int destreza;
+    int constituica;
 
     // Construtor
-    public Criar(String nome, int vida, int ataque, int defesa, int agilidade) {
+    public Criar(String nome, int vida, int ataque, int defesa, int agilidade, int destreza, int constituicao) {
         this.nome = nome;
         this.vida = vida;
         this.ataque = ataque;
         this.defesa = defesa;
         this.agilidade = agilidade;
+        this.destreza = destreza;
+        this.constituicao = constituicao;
     }
 
     // Mostrar o status
@@ -20,7 +24,9 @@ public class Criar {
             " | Vida: " + vida + 
             " | Ataque: " + ataque + 
             " | Defesa: " + defesa + 
-            " | Agilidade: " + agilidade);
+            " | Agilidade: " + agilidade;
+            " | Destreza: " + destreza;
+            " | Constituicao: " + constituicao;
     }
 
     // Verifica se está vivo
