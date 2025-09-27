@@ -1,5 +1,5 @@
 public class Guerreiro extends Criar{
     public Guerreiro(){
-        super("Guerreiro", 80, 20, 20,2);
+        super("Guerreiro", 80, 20, 20, 2, 20, 50);
     }
 }
