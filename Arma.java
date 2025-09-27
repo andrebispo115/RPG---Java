@@ -14,7 +14,7 @@ public class Arma extends Dado {
         return this.dano;
     }
 
-    public void calcularDano(d) {
+    public void calcularDano() {
         if (this.categoria.equals("Pesada")) {
             int resultadoDado = rolarDado(12);
             this.dano = (this.forca * 1.5) + 10 + resultadoDado;
