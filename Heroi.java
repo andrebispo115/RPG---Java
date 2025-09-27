@@ -1,11 +1,10 @@
 public class Heroi {
 
     private String nome;
-    private int pv; 
-
+    private int vida;
     private int forca;
-    private int constituicao;
     private int agilidade;
+    private int constituicao;
     private int destreza;
 
     public Heroi(String nome, int pv, int forca, int constituicao, int agilidade, int destreza) {
