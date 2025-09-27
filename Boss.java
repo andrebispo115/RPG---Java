@@ -1,4 +1,4 @@
 public class Boss extends Inimigo(){
-    public Boss(String nome, int vida, int forca, int defesa, int agilidade) {
+    public Boss() {
         super(nome, vida, forca, defesa, agilidade);
 }
