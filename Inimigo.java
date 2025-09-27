@@ -1,4 +1,4 @@
-public class Heroi {
+public class Inimigo {
 
     private String nome;
     private int vida;
