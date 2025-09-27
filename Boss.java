@@ -1,4 +1,4 @@
 public class Boss extends Inimigo(){
     public Boss() {
-        super(nome, vida, forca, defesa, agilidade);
+        super("Minotouro", 100, 50, 40, 40);
 }
