@@ -12,6 +12,8 @@ public class Dado {
         // Para obter o intervalo de 1 a lado max. do dado, somamos 1 ao resultado.
         int resultado = numeroAleatorio + 1;
 
-        System.out.println("D" + lado": " + resultado);
+        System.out.println("D" + lado + ": " + resultado); // Sintaxe corrigida
+        
+        return resultado; // Retorna o valor da rolagem
     }
-}    
+}
