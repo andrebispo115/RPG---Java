@@ -1,17 +1,17 @@
 public class Criar {
     String nome; 
     int vida;
-    int ataque;
+    int forca;
     int defesa;
     int agilidade;
     int destreza;
     int constituica;
 
     // Construtor
-    public Criar(String nome, int vida, int ataque, int defesa, int agilidade, int destreza, int constituicao) {
+    public Criar(String nome, int vida, int forca, int defesa, int agilidade, int destreza, int constituicao) {
         this.nome = nome;
         this.vida = vida;
-        this.ataque = ataque;
+        this.forca = forca;
         this.defesa = defesa;
         this.agilidade = agilidade;
         this.destreza = destreza;
@@ -22,7 +22,7 @@ public class Criar {
     public void mostrarStatus() {
         System.out.println(nome + 
             " | Vida: " + vida + 
-            " | Ataque: " + ataque + 
+            " | Forca: " + forca + 
             " | Defesa: " + defesa + 
             " | Agilidade: " + agilidade;
             " | Destreza: " + destreza;
@@ -36,7 +36,7 @@ public class Criar {
 
     // Atacar outro personagem
     public void atacar(Criar inimigo) {
-        int dano = this.ataque - inimigo.defesa;
+        int dano = this.forca - inimigo.defesa;
         if (dano < 0) dano = 0; // impede dano negativo
         inimigo.vida -= dano;
         if (inimigo.vida < 0) inimigo.vida = 0; // evita vida negativa
