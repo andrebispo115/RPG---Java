@@ -1,16 +1,17 @@
-public class Armadura{
+public class Armadura {
     private String nome;
     private int defesa;
-    
-    Armadura(String nome){
+
+    public Armadura(String nome) {
         this.nome = nome;
+        this.defesa = 0; // Inicializa a defesa
     }
-    
-    public double getdefesa {
+
+    public int getDefesa() {
         return this.defesa;
     }
-    
-    public void calcularDefesa(){
-        this.defesa = 10 + (1,5 * this.constituicao);
+
+    public void calcularDefesa(int constituicao) {
+        this.defesa = (int) (10 + (1.5 * constituicao));
     }
 }
