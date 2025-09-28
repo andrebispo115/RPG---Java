@@ -1,13 +1,12 @@
 public class Criar {
-    String nome; 
-    int vida;
-    int forca;
-    int defesa;
-    int agilidade;
-    int destreza;
-    int constituica;
+    public String nome;
+    public int vida;
+    public int forca;
+    public int defesa;
+    public int agilidade;
+    public int destreza;
+    public int constituicao;
 
-    // Construtor
     public Criar(String nome, int vida, int forca, int defesa, int agilidade, int destreza, int constituicao) {
         this.nome = nome;
         this.vida = vida;
@@ -18,29 +17,37 @@ public class Criar {
         this.constituicao = constituicao;
     }
 
-    // Mostrar o status
+    // Método para exibir o status do personagem
     public void mostrarStatus() {
-        System.out.println(nome + 
-            " | Vida: " + vida + 
-            " | Forca: " + forca + 
-            " | Defesa: " + defesa + 
-            " | Agilidade: " + agilidade;
-            " | Destreza: " + destreza;
-            " | Constituicao: " + constituicao;
+        System.out.println("----------------------------------------");
+        System.out.println("Personagem: " + nome);
+        System.out.println("Vida: " + vida);
+        System.out.println("Força: " + forca);
+        System.out.println("Defesa: " + defesa);
+        System.out.println("Agilidade: " + agilidade);
+        System.out.println("Destreza: " + destreza);
+        System.out.println("Constituição: " + constituicao);
+        System.out.println("----------------------------------------");
     }
 
-    // Verifica se está vivo
     public boolean estaVivo() {
         return vida > 0;
     }
 
-    // Atacar outro personagem
-    public void atacar(Criar inimigo) {
-        int dano = this.forca - inimigo.defesa;
-        if (dano < 0) dano = 0; // impede dano negativo
-        inimigo.vida -= dano;
-        if (inimigo.vida < 0) inimigo.vida = 0; // evita vida negativa
+    public void atacar(Criar inimigo, Arma arma) {
+        // Cálculo do dano da arma, que agora recebe a força/destreza do atacante
+        arma.calcularDano(this.forca, this.destreza);
+        double dano = arma.getDano() - inimigo.defesa;
+        
+        if (dano < 0) {
+            dano = 0;
+        }
 
-        System.out.println(nome + " atacou " + inimigo.nome + " causando " + dano + " de dano!");
+        inimigo.vida -= dano;
+        if (inimigo.vida < 0) {
+            inimigo.vida = 0;
+        }
+
+        System.out.println(this.nome + " atacou " + inimigo.nome + " causando " + String.format("%.1f", dano) + " de dano!");
     }
 }
