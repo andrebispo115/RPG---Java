@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Arma extends Dado {
     private String nome;
     private String categoria;
@@ -14,15 +12,15 @@ public class Arma extends Dado {
         return this.dano;
     }
 
-    public void calcularDano() {
+    public void calcularDano(int forca, int destreza) {
         if (this.categoria.equals("Pesada")) {
             int resultadoDado = rolarDado(12);
-            this.dano = (this.forca * 1.5) + 10 + resultadoDado;
+            this.dano = (forca * 1.5) + 10 + resultadoDado;
         } else { // Categoria "Leve"
             int resultadoD6_1 = rolarDado(6);
             int resultadoD6_2 = rolarDado(6);
             int resultadoD4 = rolarDado(4);
-            this.dano = resultadoD6_1 + resultadoD6_2 + resultadoD4 + this.destreza + 10);
+            this.dano = resultadoD6_1 + resultadoD6_2 + resultadoD4 + destreza + 10;
         }
     }
 }
