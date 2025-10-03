@@ -42,12 +42,13 @@ public class Menu {
         // Este é um local que pode ser alterado para mudar a história.
         // Adicione ou remova linhas de System.out.println() conforme desejar.
         System.out.println("\n----------------------------------------");
-        System.out.println("        Capítulo I: A Névoa da Desolação");
+        System.out.println("        Capitulo.... : .....");
         System.out.println("----------------------------------------");
-        System.out.println("Uma névoa estranha e escura cobriu a terra. As plantações secaram e as");
-        System.out.println("pessoas adoeceram. Você, um jovem herói, foi escolhido para entrar na");
-        System.out.println("Floresta das Lamentações e encontrar a fonte dessa maldição.");
-        System.out.println("Para sobreviver, você precisa se preparar.");
+        System.out.println("Após anos com lutas intermináveis voçê descobre um jeito de sair desse lugar.");
+        System.out.println("Mesmo que voçê não se sinta mais pertencente ao mundo humano e que talvez não seja bem vindo, ");
+        System.out.println("ainda há forças para sair do dark aether.");
+        System.out.println("Depois de um longo planejamento com o Dr. Maxis e a S.O.F.I.A voçê se despede deles e vai para a sua rota de fuga.");
+        System.out.println("Porém na primeira parte do seu trajeto voçê se depara com um inimigo.");
         System.out.println("----------------------------------------\n");
         // --- FIM DA HISTÓRIA ---
 
@@ -88,41 +89,41 @@ public class Menu {
     }
 
     public static Criar criarPersonagem(Scanner teclado) {
-        System.out.println("Escolha sua classe:");
-        System.out.println("1- Elfo");
-        System.out.println("2- Guerreiro");
-        System.out.println("3- Ladrão");
+        System.out.println("Escolha seu personagem:");
+        System.out.println("1- Dempsey");
+        System.out.println("2- Nikolai");
+        System.out.println("3- Takeo");
         System.out.print("Sua escolha: ");
         int classeEscolha = teclado.nextInt();
         
         switch (classeEscolha) {
             case 1:
-                return new Elfo();
+                return new Dempsey();
             case 2:
-                return new Guerreiro();
+                return new Nikolai();
             case 3:
-                return new Ladrao();
+                return new Takeo();
             default:
-                System.out.println("Opção inválida. Você será um Bastardo por padrão.");
-                return new Bastardo();
+                System.out.println("Opção inválida. Você será um o Claus por padrão.");
+                return new Claus();
         }
     }
 
     public static Arma escolherArma(Scanner teclado, Criar heroi) {
         System.out.println("\nEscolha sua arma:");
-        System.out.println("1- Espada Longa (Pesada)");
-        System.out.println("2- Arco Élfico (Leve)");
-        System.out.println("3- Machado de Batalha (Pesada)");
+        System.out.println("1- Hagnarok DG4 (Pesada)");
+        System.out.println("2- Arco elétrico (Leve)");
+        System.out.println("3- Cajado de gelo (Pesada)");
         System.out.print("Sua escolha: ");
         int armaEscolha = teclado.nextInt();
         
         switch (armaEscolha) {
             case 1:
-                return new Arma("Espada Longa", "Pesada");
+                return new Arma("Hagnarok DG4", "Pesada");
             case 2:
-                return new Arma("Arco Élfico", "Leve");
+                return new Arma("Arco elétrico", "Leve");
             case 3:
-                return new Arma("Machado de Batalha", "Pesada");
+                return new Arma("Cajado de gelo", "Pesada");
             default:
                 System.out.println("Opção inválida. Você pega uma Adaga (Leve) por padrão.");
                 return new Arma("Adaga", "Leve");
@@ -157,3 +158,4 @@ public class Menu {
         return armadura;
     }
 }
+
