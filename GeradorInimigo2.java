@@ -16,6 +16,6 @@ public class GeradorInimigo2 {
 
         int indiceAleatorio = random.nextInt(INIMIGOS_DO_CAPITULO_1.length);
 
-        return INIMIGOS_DO_CAPITULO_1[indiceAleatorio];
+        return INIMIGOS_DO_CAPITULO_2[indiceAleatorio];
     }
 }
