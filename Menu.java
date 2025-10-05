@@ -49,9 +49,9 @@ public class Menu {
     public static void jogar(Scanner teclado) {
         // --- INÍCIO DA HISTÓRIA ---
         System.out.println("\n----------------------------------------");
-        System.out.println("        Capitulo 1: O Caminho para Sair");
+        System.out.println("        Capitulo ..: .....");
         System.out.println("----------------------------------------");
-        System.out.println("Após anos com lutas intermináveis você descobre um jeito de sair desse lugar.");
+        System.out.println("Após anos com lutas intermináveis você descobre um jeito de sair do dark aether.");
         System.out.println("Porém na primeira parte do seu trajeto você se depara com um inimigo.");
         System.out.println("----------------------------------------\n");
         // --- FIM DA HISTÓRIA ---
@@ -303,3 +303,4 @@ public class Menu {
         return armadura;
     }
 }
+
