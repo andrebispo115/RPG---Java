@@ -17,7 +17,6 @@ public class Menu {
             System.out.println("----------------------------------------");
             System.out.print("Escolha uma opção: ");
             
-            // Certifica que a entrada é um inteiro válido
             if (teclado.hasNextInt()) {
                 escolha = teclado.nextInt();
             } else {
@@ -47,31 +46,27 @@ public class Menu {
     }
 
     public static void jogar(Scanner teclado) {
-        // --- INÍCIO DA HISTÓRIA ---
+ 
         System.out.println("\n----------------------------------------");
         System.out.println("        Capitulo ..: .....");
         System.out.println("----------------------------------------");
         System.out.println("Após anos com lutas intermináveis você descobre um jeito de sair do dark aether.");
         System.out.println("Porém na primeira parte do seu trajeto você se depara com um inimigo.");
         System.out.println("----------------------------------------\n");
-        // --- FIM DA HISTÓRIA ---
+   
 
-        // CRIAÇÃO DO PERSONAGEM
         Personagem heroi = criarPersonagem(teclado); 
-        
-        // ESCOLHA DE EQUIPAMENTOS
+     
         Arma arma = escolherArma(teclado, heroi);
         Armadura armadura = escolherArmadura(teclado, heroi);
         
-        // A Defesa base do Herói é definida pela armadura escolhida
         heroi.defesa = armadura.getDefesa(); 
         
         System.out.println("\n" + heroi.nome + " parte em direção ao primeiro inimigo!");
         System.out.println("Você está equipado com " + arma.getNome() + " e " + armadura.getNome() + ".");
         
         heroi.mostrarStatus();
-        
-        // PRIMEIRA BATALHA
+
         Inimigo inimigoDoCapitulo1 = GeradorInimigo1.gerarPrimeiroInimigo();
         batalha(teclado, heroi, arma, armadura, inimigoDoCapitulo1);
         
@@ -80,7 +75,6 @@ public class Menu {
         }
     }
 
-    // --- LÓGICA DE BATALHA ---
     public static void batalha(Scanner teclado, Personagem heroi, Arma arma, Armadura armadura, Inimigo inimigo) {
         System.out.println("\n----------------------------------------");
         System.out.println("      Encontro: Um " + inimigo.nome + " Feroz!");
@@ -303,4 +297,5 @@ public class Menu {
         return armadura;
     }
 }
+
 
