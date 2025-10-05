@@ -1,5 +1,5 @@
 public class Boss extends Inimigo {
     public Boss() {
-        super("S.A.M", 100, 50, 40, 40, 20, 30);
+        super("S.A.M", 100, 20, 40, 40, 20, 30);
     }
 }
