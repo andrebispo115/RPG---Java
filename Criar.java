@@ -1,53 +1,47 @@
-public class Criar {
+import java.util.Random;
+
+public abstract class Personagem {
+
     public String nome;
     public int vida;
+    public int vidaMaxima;
     public int forca;
-    public int defesa;
+    public int defesa; // Defesa base atual
     public int agilidade;
     public int destreza;
     public int constituicao;
+    public int porcoesRestantes;
+    public int nivel;
+    
+    // Apenas para que as classes Inimigo e Boss possam usar o Dado
+    protected Dado dado = new Dado(); 
 
-    public Criar(String nome, int vida, int forca, int defesa, int agilidade, int destreza, int constituicao) {
+    public Personagem(String nome, int vida, int forca, int defesa, int agilidade, int destreza, int constituicao) {
         this.nome = nome;
         this.vida = vida;
+        this.vidaMaxima = vida;
         this.forca = forca;
         this.defesa = defesa;
         this.agilidade = agilidade;
         this.destreza = destreza;
         this.constituicao = constituicao;
+        this.porcoesRestantes = 3; 
+        this.nivel = 1;
     }
 
-    // Método para exibir o status do personagem
     public void mostrarStatus() {
         System.out.println("----------------------------------------");
-        System.out.println("Personagem: " + nome);
-        System.out.println("Vida: " + vida);
-        System.out.println("Força: " + forca);
-        System.out.println("Defesa: " + defesa);
-        System.out.println("Agilidade: " + agilidade);
-        System.out.println("Destreza: " + destreza);
-        System.out.println("Constituição: " + constituicao);
+        System.out.println("Personagem: " + nome + " (Nível: " + nivel + ")");
+        System.out.println("Vida: " + vida + "/" + vidaMaxima);
+        System.out.println("Força: " + forca + " | Agilidade: " + agilidade + " | Destreza: " + destreza);
+        System.out.println("Defesa Base: " + defesa + " | Constituição: " + constituicao);
+        System.out.println("Poções Restantes: " + porcoesRestantes);
         System.out.println("----------------------------------------");
     }
 
     public boolean estaVivo() {
         return vida > 0;
     }
-
-    public void atacar(Criar inimigo, Arma arma) {
-        // Cálculo do dano da arma, que agora recebe a força/destreza do atacante
-        arma.calcularDano(this.forca, this.destreza);
-        double dano = arma.getDano() - inimigo.defesa;
-        
-        if (dano < 0) {
-            dano = 0;
-        }
-
-        inimigo.vida -= dano;
-        if (inimigo.vida < 0) {
-            inimigo.vida = 0;
-        }
-
-        System.out.println(this.nome + " atacou " + inimigo.nome + " causando " + String.format("%.1f", dano) + " de dano!");
-    }
+    
+    // O método usarPocao foi movido para a classe Pocao
 }
