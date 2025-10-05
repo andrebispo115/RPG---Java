@@ -30,8 +30,7 @@ public class Menu {
                     jogar(teclado);
                     break;
                 case 2:
-                    System.out.println("\nCriado por: Seu Nome");
-                    System.out.println("Versão: 1.0\n");
+                    System.out.println("\nCriado por: André Bispo, Athus Gabriel, Pedro Girotto, monitores e chat");
                     break;
                 case 3:
                     System.out.println("\nObrigado por jogar!");
@@ -240,3 +239,4 @@ public class Menu {
         return novaArmadura;
     }
 }
+
