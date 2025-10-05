@@ -59,7 +59,7 @@ public class Menu {
         Arma arma = escolherArma(teclado, heroi);
         Armadura armadura = escolherArmadura(teclado, heroi);
         
-        System.out.println("\nSua jornada começa agora, " + heroi.nome + "!");
+        System.out.println("\n " + heroi.nome + "parte em direção ou primeiro inimigo");
         System.out.println("Você está equipado com " + arma.nome + " e " + armadura.nome + ".");
         
         heroi.mostrarStatus();
@@ -158,4 +158,5 @@ public class Menu {
         return armadura;
     }
 }
+
 
