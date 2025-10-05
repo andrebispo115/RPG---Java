@@ -4,14 +4,19 @@ public class Armadura {
 
     public Armadura(String nome) {
         this.nome = nome;
-        this.defesa = 0; // Inicializa a defesa
+        this.defesa = 0; 
     }
 
     public int getDefesa() {
         return this.defesa;
     }
-
+  
     public void calcularDefesa(int constituicao) {
+
         this.defesa = (int) (10 + (1.5 * constituicao));
+    }
+    
+    public String getNome() {
+        return this.nome;
     }
 }
