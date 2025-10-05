@@ -12,6 +12,10 @@ public class Arma extends Dado {
         return this.dano;
     }
 
+    public String getNome() {
+        return this.nome;
+    }
+
     public void calcularDano(int forca, int destreza) {
         if (this.categoria.equals("Pesada")) {
             int resultadoDado = rolarDado(12);
