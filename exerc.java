@@ -1,26 +1,46 @@
 
-package com.mycompany.app2;
+package app2;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class App2 {
 
     public static void main(String[] args) {
+        ArrayList<Professor>professores = new ArrayList();
         ArrayList<Aluno>EC2MA =new ArrayList();
         Scanner scanner = new Scanner(System.in);
         int r;
-        
+        String N;
+        int I;
+        int T;
+        double P;
+             
         while(true){
+            System.out.println("voce deseja adicionar \n");
+            System.out.println("1 - professor");
+            System.out.println("... - aluno");
+            I = scanner.nextInt();
+            if(I == 1){
+            
+            System.out.println("digite o nome do professor");
+            N = scanner.next();
+            System.out.println("digite a idade do professor");
+            I = scanner.nextInt();
+            System.out.println("digite o tempo de escola");
+            T = scanner.nextInt();
+            professores.add(new Professor(N, I, T));
+            }else{
+            
             System.out.println("digite o nome do aluno");
-            String N = scanner.next();
+            N = scanner.next();
             System.out.println("digite a idade do aluno");
-            int I = scanner.nextInt();
+            I = scanner.nextInt();
             System.out.println("digite a nota final do aluno");
-            double P = scanner.nextDouble();
+            P = scanner.nextDouble();
             Aluno aluno = new Aluno(N, I, P);
             EC2MA.add(aluno);
-        
+            }
             do{
-                System.out.println("deseja adicionar mais um alunos");
+                System.out.println("deseja adicionar uma pessoa?");
                 System.out.println("1 - sim, 2 - nao");
                 r = scanner.nextInt();
                 if(r != 1 && r != 2){
@@ -40,13 +60,13 @@ public class App2 {
                 System.out.println("2 - ver a media de nota dos alunos \n");
                 System.out.println("3 - ver a media de idade dos alunos \n");
                 System.out.println("4 - ver o desvio padrao das notas \n");
-                System.out.println("5 - ver a mediana das notas \n");
-                System.out.println("6 - sair");
+                System.out.println("5 - sair \n");
                 r = scanner.nextInt();
                 
                 if(r==1){
                     for(Aluno aluno : EC2MA){
                         System.out.println(aluno);
+                        aluno.fazendo();
                     }    
                     }else if(r==2){
                         c = 0;
@@ -88,10 +108,13 @@ public class App2 {
                             n = n + valor;
                         }
                         n = Math.sqrt(n/c);
-                        System.out.println("o desvio padrao da turma e:" +n);
+                        System.out.println("o desvio padrao da turma e: " +n);
                     
                     }
             }while(r != 5);
+        
+            
+            
         scanner.close();
     }    
     
